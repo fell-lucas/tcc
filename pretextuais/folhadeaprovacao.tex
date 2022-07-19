@@ -1,0 +1,62 @@
+% -----------------------------------------------
+% Folha de aprovação [OBRIGATÓRIO]
+% -----------------------------------------------
+% Este é um exemplo de Folha de aprovação, elemento obrigatório da NBR 14724/2011 (seção 4.2.1.3).
+% Você pode utilizar este modelo até a aprovação do trabalho.
+% Após isso, altere o conteúdo deste arquivo para inserir uma imagem da página assinada pela banca usando
+% o modelo que está no final deste arquivo.
+
+% -----------------------------------------------
+% Folha de aprovação antes da defesa do TCC
+% -----------------------------------------------
+%\begin{comment}
+\begin{folhadeaprovacao}
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}%\vspace*{\fill}
+    {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+    \vspace*{\fill}
+
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+  \end{center}
+
+  \begin{center}
+    \imprimirtipotrabalho presented and approved on ..... .............. of ......
+
+    Committee members:
+  \end{center}
+
+  \assinatura{\textbf{\imprimirorientador} \\ Supervisor \\ UNIPAMPA}
+  \makeatletter
+  \abntex@ifnotempty{\imprimircoorientador}{%
+    \assinatura{\textbf{\imprimircoorientador} \\ Coorientador \\ <sigla da instituição>}%
+  }
+  \makeatother
+  \assinatura{\textbf{Prof. <titulação> Nome Professor} \\ <sigla da instituição>}
+  \assinatura{\textbf{Prof. <titulação> Nome Professor} \\ <sigla da instituição>}
+
+\end{folhadeaprovacao}
+%\end{comment}
+% -----------------------------------------------
+% Folha de aprovação após a defesa do TCC com a imagem da folha de aprovação assinada pela banca.
+% -----------------------------------------------
+\begin{comment}
+\begin{folhadeaprovacao}
+
+% Escolher entre uma das seguintes opções para inclusão da folha de aprovação
+% Versão assinada em arquivo PDF (incluir no arquivo principal o comando \usepackage{pdfpages})
+%\includepdf{pretextuais/aprovacao.pdf}
+
+% Ou, versão assinada em arquivo de imagem (jpg, png, etc)
+% Mas prefira em PDF. Em imagem é preciso acertar os recuos das margens:
+%\vspace*{-4cm}
+%\hspace*{-3.5cm}
+%\includegraphics[width=\paperwidth]{pretextuais/aprovacao}
+
+\end{folhadeaprovacao}
+\end{comment}
