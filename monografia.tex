@@ -71,12 +71,6 @@
 \usepackage{pdfpages}        % Para incluir a folha de aprovação assinada em PDF
 \usepackage[olditem]{paralist}       % Listas in-line
 % -------------------------------------------------------------------------------------------------
-% Configurações de pacotes
-% -------------------------------------------------------------------------------------------------
-% \addto\captionsbrazil{
-%   \renewcommand{\listfigurename}{List of figures}
-% }
-% -------------------------------------------------------------------------------------------------
 \addto\captionsenglish{% ingles
   %% adjusts names from abnTeX2
   \renewcommand{\folhaderostoname}{Title page}
@@ -188,7 +182,6 @@
 \local{Alegrete}
 \data{2022}
 \orientador{Prof. PhD. Maicon Bernardino da Silveira}
-% \coorientador{Prof. <titulação> Nome do Coorientador} % Se houver
 \instituicao{Federal University of Pampa}
 %\tipotrabalho{Projeto de Trabalho de Conclusão de Curso~} % Para TCC I
 \tipotrabalho{Trabalho de Conclusão de Curso~} % Para TCC II
@@ -196,133 +189,45 @@
 \preambulo{\imprimirtipotrabalho presented in Software Engineering Graduation Course in the Federal University of Pampa as a partial requirement for
 obtaining the title of Software Engineering
 Bachelor}
-% +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-% -------------------------------------------------------------------------------------------------
-% Compila o indice
-\makeindex
-% Compila a lista de abreviaturas e siglas
-% Para funcionar, o seguinte comando deve ser executado:
-% makeindex ARQUIVO_PRINCIPAL.nlo -s nomencl.ist -o ARQUIVO_PRINCIPAL.nls
-\makenomenclature
-% -------------------------------------------------------------------------------------------------
 
-% -------------------------------------------------------------------------------------------------
+\makeindex % Compila o indice
+\makenomenclature % Compila a lista de abreviaturas e siglas
 \input{acro}
-% -------------------------------------------------------------------------------------------------
-% Nomenclaturas/Símbolos
-% \nomenclature{$A_i$}{Área do $i^{esimo}$ componente}
-% \nomenclature{456}{Isto é um número}
-% \nomenclature{123}{Isto é outro número}
-% \nomenclature{$n$}{Tamanho da entrada}
-% \nomenclature{$V$}{Vetor de elementos}
-% \nomenclature{$\mathcal{T}$}{Conjunto de trabalhos de TCC}
 
-% -------------------------------------------------------------------------------------------------
-
-
-% *************************************************************************************************
 \begin{document}
-% Inclui alguns ajustes finos para que fique de acordo com o Manual de Normatização
-\include{consertos}
+\include{consertos} % Inclui alguns ajustes finos para que fique de acordo com o Manual de Normatização
 \selectlanguage{english}
-% *************************************************************************************************
-% +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 % ELEMENTOS PRÉ-TEXTUAIS
-% +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-% \pretextual
+\imprimircapa % Capa [OBRIGATÓRIO]
+\imprimirfolhaderosto % Folha de rosto [OBRIGATÓRIO]
 
-% -----------------------------------------------
-% Capa [OBRIGATÓRIO]
-% -----------------------------------------------
-\imprimircapa
-
-% -----------------------------------------------
-% Folha de rosto [OBRIGATÓRIO]
-% -----------------------------------------------
-% (ver documentação do abntex2 caso seja necessário haver ficha catalográfica)
-\imprimirfolhaderosto
-
-% -----------------------------------------------
-% Folha de aprovação [OBRIGATÓRIO]
-% -----------------------------------------------
-% Veja alguns detalhes no arquivo.
-\input{pretextuais/folhadeaprovacao}
-
-% -----------------------------------------------
-% Dedicatória [OPCIONAL]
-% -----------------------------------------------
-\input{pretextuais/dedicatoria}
-
-% -----------------------------------------------
-% Agradecimentos [OPCIONAL]
-% -----------------------------------------------
-\input{pretextuais/agradecimentos}
-
-% -----------------------------------------------
-% Epígrafe [OPCIONAL]
-% -----------------------------------------------
-\input{pretextuais/epigrafe}
-
-% -----------------------------------------------
-% Resumo [OBRIGATÓRIO]
-% -----------------------------------------------
-\input{pretextuais/resumo}
-
-% -----------------------------------------------
-% Abstract (resumo em inglês) [OBRIGATÓRIO]
-% -----------------------------------------------
-\input{pretextuais/abstract}
-
-% Resumo estendido [OPCIONAL]
-% \input{pretextuais/resumoest}
-
-% -----------------------------------------------
-% Listas
-% -----------------------------------------------
+\input{pretextuais/folhadeaprovacao} % Folha de aprovação [OBRIGATÓRIO]
+\input{pretextuais/dedicatoria} % Dedicatória [OPCIONAL]
+\input{pretextuais/agradecimentos} % Agradecimentos [OPCIONAL]
+\input{pretextuais/epigrafe} % Epígrafe [OPCIONAL]
+\input{pretextuais/resumo} % Resumo [OBRIGATÓRIO]
+\input{pretextuais/abstract} % Abstract (resumo em inglês) [OBRIGATÓRIO]
 % Figuras/Ilustrações [OPCIONAL]
 \pdfbookmark[0]{\listfigurename}{lof}
 \listoffigures*
 \cleardoublepage
-% -----------------------------------------------
+
 % Tabelas [OPCIONAL]
 \pdfbookmark[0]{\listtablename}{lot}
 \listoftables*
 \cleardoublepage
-% -----------------------------------------------
-% Abreviaturas [OPCIONAL] (veja o pacote acro e os exemplo acima)
-% \newcommand{\lobname}{Lista de abreviaturas}
-% \pdfbookmark[0]{\lobname}{lob}
-% \printacronyms[include-classes=abreviaturas,name=\lobname,heading=chapter*]
-% \cleardoublepage
-% -----------------------------------------------
+
 % Siglas [OPCIONAL] (veja o pacote acro e os exemplo acima)
 \pdfbookmark[0]{\listadesiglasname}{loa}
 \printacronyms[include=acronimos,name=\listadesiglasname,heading=chapter*]
 \cleardoublepage
-% -----------------------------------------------
-% Símbolos [OPCIONAL] (veja o pacote nomencl e os exemplo acima)
-% \renewcommand{\nomname}{Lista de símbolos}
-% \pdfbookmark[0]{\nomname}{los}
-% \printnomenclature
-% \cleardoublepage
 
-
-% -----------------------------------------------
 % Sumário
-% -----------------------------------------------
 \pdfbookmark[0]{Table of contents}{toc}
 \tableofcontents*
 \cleardoublepage
-% -----------------------------------------------
-
-\begin{comment}
-%cutter={M1234x}, % INFORMAÇÃO QUE VAI NA FICHA CATALOGRÁFICA
-%cdu={100.0*01.10},  % Define o identificador CDU do documento, fornecido pela Secretaria do Curso (verificar se é necessário).
-keywords={Modelo de texto, UNIPAMPA, Latex}, % Define as palavras-chave que deverão constar na Ficha Catalográfica, separadas por vírgulas.
-firstcommitteemember={Nome membro da banca 1\\ UNIPAMPA},
-secondcommitteemember={Nome membro da banca 2\\ Instituição},
-\end{comment}
 
 \textual
 
@@ -335,32 +240,12 @@ secondcommitteemember={Nome membro da banca 2\\ Instituição},
 \input{textuais/conclusao} % [OBRIGATORIO]
 
 
-% +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % ELEMENTOS PÓS-TEXTUAIS
-% +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \postextual
 
-% -----------------------------------------------
-% Bibliografia [OBRIGATORIO]
-% -----------------------------------------------
-% Nome(s) do(s) arquivo(s) .bib (sem a extensão)
-\bibliography{bibliografia,abntex2-modelo-references}
-
-% -----------------------------------------------
-% Apêndices [OPCIONAL]
-% -----------------------------------------------
-\input{postextuais/apendices}
-
-% -----------------------------------------------
-% Anexos [OPCIONAL]
-% -----------------------------------------------
-\input{postextuais/anexos}
-
-% -----------------------------------------------
-% Índice Remissivo [OPCIONAL]
-% -----------------------------------------------
-% Veja o pacote makeindex para mais informações
-\printindex
-
+\bibliography{bibliografia,abntex2-modelo-references} % Bibliografia [OBRIGATORIO]
+\input{postextuais/apendices} % Apêndices [OPCIONAL]
+\input{postextuais/anexos} % Anexos [OPCIONAL]
+\printindex % Índice Remissivo [OPCIONAL]
 
 \end{document}
