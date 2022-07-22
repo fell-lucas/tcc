@@ -44,7 +44,6 @@
 \usepackage{lmodern}        % Usa fonte Latin Modern
 \usepackage[T1]{fontenc}    % Seleção de codificação de fonte
 \usepackage[utf8]{inputenc} % Codificação do arquivo (conversão automática dos acentos)
-\usepackage[brazil]{babel}  % Idioma para hifenização e tradução de vários elementos
 \usepackage{makeidx}        % Criação de índice
 \usepackage{hyperref}       % Formatação do índice
 \usepackage{lastpage}       % Usado pela Ficha catalográfica
@@ -64,14 +63,13 @@
 \usepackage{pgfplots}       % Usa o pacote tikz para fazer gráficos muito melhores que os do Excel
 \usepackage{pgfplotstable}  % Para gerar tabelas automaticamente a partir de arquivos com dados
 \usepackage{filecontents}   % Para colocar o conteúdo de um arquivo dentro de um arquivo tex
-\usepackage{todonotes}      % Para criar anotações durante o desenvolvimento do texto
 %\usepackage{multirow}       % Permite fazer tabelas com múltiplas linhas
 %\let\newfloat=\undefined    % Workaround para usar o pacote algorithm
 %\usepackage{algorithm}      % Para escrever algoritmos
 %\usepackage{clrscode}       % Para escrever algoritmos
 %\usepackage{clrscode3e}     % Para escrever algoritmos; mais simples que os pacotes acima
 \usepackage{pdfpages}        % Para incluir a folha de aprovação assinada em PDF
-\usepackage{paralist}       % Listas in-line
+\usepackage[olditem]{paralist}       % Listas in-line
 % -------------------------------------------------------------------------------------------------
 % Configurações de pacotes
 % -------------------------------------------------------------------------------------------------
@@ -111,7 +109,8 @@
   \renewcommand{\englishlisttablename}{List of tables}
   \renewcommand{\englishtablename}{Table}
   \renewcommand{\englishcontentsname}{List of contents}
-   \renewcommand{\imprimirtipotrabalho}{Term Paper }
+  \renewcommand{\englishchaptername}{Chapter}
+  \renewcommand{\imprimirtipotrabalho}{Term Paper }
 }
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
@@ -220,12 +219,12 @@ Bachelor}
 % \nomenclature{$\mathcal{T}$}{Conjunto de trabalhos de TCC}
 
 % -------------------------------------------------------------------------------------------------
-% Inclui alguns ajustes finos para que fique de acordo com o Manual de Normatização
-\include{consertos}
 
 
 % *************************************************************************************************
 \begin{document}
+% Inclui alguns ajustes finos para que fique de acordo com o Manual de Normatização
+\include{consertos}
 \selectlanguage{english}
 % *************************************************************************************************
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
