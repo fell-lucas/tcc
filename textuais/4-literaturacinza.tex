@@ -1,7 +1,7 @@
 % Literatura Cinza - protocolo, resultados, lista de ferramentas encontradas -> lista preliminar de requisitos
 % Screenshot / análise / resumo sobre 
 %==============================================================================
-\chapter{Gray Literature}\label{grayliterature}
+\chapter{Gray Literature Systematic Review}\label{grayliterature}
 %==============================================================================
 
 Since the final outcome of this research is a software product, a systematic review of the gray literature - to map and evaluate existing tools and solutions that already solve the problem of managing outreach activities in the context of higher education universities - would be of great value before starting the development of the solution itself. The review was conducted by two authors. As previously mentioned, there are two research papers, written individually, but the artifacts created to support the study were made in conjunction.
@@ -54,7 +54,7 @@ Furthermore, due to the scope being limited to outreach activities in Brazilian 
 
 Ultimately, the authors came up with ten search strings in total, with seven of them using the combination of the terms "\textbf{extensão} (\textbf{programa} | \textbf{projeto})", which were defined as the most relevant terms. With each string, a limit was set to use only the first ten pages returned by the search engine, resulting in one hundred records per string and, consequently, one thousand records in total.
 
-The keyword ``\acs{SIGAA}'' was removed after the first search because it is a tool used by many public universities, which cluttered the results with essentially the same record, potentially hiding other solutions. The defined strings are presented in \autoref{tab:gl-strings}.
+The keyword ``\acs{SIGAA}'' was removed after the first search because it is a tool used by many public universities \cite{das2013sistema}, which cluttered the results with essentially the same record, potentially hiding other solutions. The defined strings are presented in \autoref{tab:gl-strings}.
 
 \input{artifacts/search-strings.tex}
 
@@ -107,6 +107,24 @@ In order to answer the defined research questions (\autoref{tab:research-questio
 Afterwards, the first four most relevant features in common with all the analyzed tools were highlighted and a new manual extraction was performed. Now with the purpose to find all the features these solutions had. With this data refined and tabulated, it becomes much easier to solve similar problems that will eventually arise when developing the goal product.
 
 \section{Reporting}\label{sec:gl-reporting}
+
+The search and record mapping was carried out between 17/02/2022 and 20/02/2022, with the objective of starting and ending in close dates, thus reducing one of the threats to validity.
+
+\subsection{Research}\label{sec:gl-research}
+
+The total workload was split equally between both authors. This way, each analyzed five of the ten pages by string, totaling fifty results by search string and five hundred in total, by author. Initially, 169 results were collected, as shown in \autoref{tbl:gl-search-results}.
+
+After applying the first step of the inclusion criteria, 56 results were left. Subsequently, the verification with the second stage of the inclusion and exclusion criteria was carried out, which further reduced the results, with 19 tools failing \textbf{IC 1.}, 8 did not pass \textbf{IC 2.} and 24 tools were denied for not passing \textbf{IC 3.}. As for the exclusion criteria, only one tool was removed by \textbf{EC 1.} and also only one by \textbf{EC 2.}, however on \textbf{EC 3.}, 14 tools did not pass and the same amount occurred for \textbf{EC 4.} Thus, there were only 12 tools and websites left to be evaluated, as shown in \autoref{fig:gl-results-criteria}.
+
+\input{artifacts/search-results.tex}
+
+\begin{figure}[htb]
+  \caption{Results x Criteria}\label{fig:gl-results-criteria}
+  \begin{center}
+    \includegraphics[width=16cm]{img/gl-results.png}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
 
 \section{Validity}\label{sec:gl-validity}
 
