@@ -70,6 +70,8 @@
 %\usepackage{clrscode3e}     % Para escrever algoritmos; mais simples que os pacotes acima
 \usepackage{pdfpages}        % Para incluir a folha de aprovação assinada em PDF
 \usepackage[olditem]{paralist}       % Listas in-line
+\usepackage{colortbl}
+
 % -------------------------------------------------------------------------------------------------
 \addto\captionsenglish{% ingles
   %% adjusts names from abnTeX2
@@ -112,6 +114,9 @@
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
 \renewcommand{\backrefpagesname}{Cited in page(s):~}
+\renewcommand*{\backrefsep}{,~}%
+\renewcommand*{\backreftwosep}{,~}% ', and~'
+\renewcommand*{\backreflastsep}{,~}% ' and~'
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 % Define os textos da citação
@@ -246,7 +251,7 @@ Bachelor}
 % ELEMENTOS PÓS-TEXTUAIS
 \postextual
 
-\bibliography{bibliografia,abntex2-modelo-references} % Bibliografia [OBRIGATORIO]
+\bibliography{bibliografia} % Bibliografia [OBRIGATORIO]
 \input{postextuais/apendices} % Apêndices [OPCIONAL]
 \input{postextuais/anexos} % Anexos [OPCIONAL]
 \printindex % Índice Remissivo [OPCIONAL]
