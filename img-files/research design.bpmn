@@ -39,7 +39,7 @@
     <bpmn:startEvent id="StartEvent_1v7v60w">
       <bpmn:outgoing>Flow_0miboq1</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:task id="Activity_1rr57bn" name="Plan a gray literature review on outreach activities tools">
+    <bpmn:task id="Activity_1rr57bn" name="Plan a grey literature review on outreach activities tools">
       <bpmn:incoming>Flow_0miboq1</bpmn:incoming>
       <bpmn:outgoing>Flow_0cgcsfu</bpmn:outgoing>
     </bpmn:task>

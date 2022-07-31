@@ -1,28 +1,31 @@
 % Literatura Cinza - protocolo, resultados, lista de ferramentas encontradas -> lista preliminar de requisitos
 % Screenshot / análise / resumo sobre 
 %================================================================
-\chapter{Gray Literature Systematic Review}\label{grayliterature}
+\chapter{Grey Literature Systematic Review}\label{greyliterature}
 %================================================================
 
-Since the final outcome of this research is a software product, a systematic review of the gray literature - to map and evaluate existing tools and solutions that already solve the problem of managing outreach activities in the context of higher education universities - would be of great value before starting the development of the solution itself. The review was conducted by two authors. As previously mentioned, there are two research papers, written individually, but the artifacts created to support the study were made in conjunction.
+Since the final outcome of this research is a software product, a systematic review of the grey literature - to map and evaluate existing tools and solutions that already solve the problem of managing outreach activities in the context of \ac{HEI} - would be of great value before starting the development of the solution itself. The review was conducted by two authors. As previously mentioned, there are two term papers, written individually, but the artifacts created to support the study were made in conjunction.
 
-This chapter reports the systematic review carried out in the gray literature. In addition, information relevant to the development of the goal product, obtained through the research, will also be presented. The protocol defined to conduct the review will be discussed, citing points such as research questions, inclusion and exclusion criteria, extracted data and search strings, in addition to detailed analysis and comparisons of the selected tools.
+This chapter reports the systematic review carried out in the grey literature. In addition, information relevant to the development of the goal product, obtained through the research, will also be presented. The protocol defined to conduct the review will be discussed, citing points such as research questions, inclusion and exclusion criteria, extracted data and search strings, in addition to detailed analysis and comparisons of the selected tools.
 
-The article is organized as follows: The \Cref{sec:gl-background} introduces terms and concepts used during the study. In \Cref{sec:gl-planning}, the protocol defined by the authors will be presented. How the research was conducted, together with the data collected to answer the research questions will be described in \Cref{sec:gl-reporting} and \Cref{sec:gl-validity} discusses threats to the validity of the study. Finally, \Cref{sec:gl-considerations} completes the systematic review.
+The chapter is organized as follows: The \Cref{sec:gl-background} introduces terms and concepts used during the study. In \Cref{sec:gl-planning}, the protocol defined by the authors will be presented. How the research was conducted, together with the data collected to answer the research questions will be described in \Cref{sec:gl-reporting} and \Cref{sec:gl-validity} discusses threats to the validity of the study. Finally, \Cref{sec:gl-considerations} completes the systematic review.
 
 \section{Background}\label{sec:gl-background}
 
-Gray literature is defined by the following quote from \cite{garousi2019guidelines}: "<gray literature> is produced at all levels of government, academia, business, and industry in print and electronic formats, but is not controlled by commercial publishers, or that is, where publication is not the main activity of the producing body".
+Grey literature is defined by the following quote from \citeonline{garousi2019guidelines}:
+\begin{citacao}
+  <grey literature> is produced at all levels of government, academia, business, and industry in print and electronic formats, but is not controlled by commercial publishers, or that is, where publication is not the main activity of the producing body.
+\end{citacao}
 
-The term ``black box'' refers to the quality of software where the internal mechanisms of the system are not known; its use only focuses on outputs generated in response to selected inputs and execution conditions \cite{nidhra2012black}. This term was used in the context of the Google search engine, where it is not known exactly what happens internally, only that sometimes the results vary minimally, even though the search string remains the same.
+The term ``black box'' refers to the quality of software where the internal mechanisms of the system are not known; its use only focuses on outputs generated in response to selected inputs and execution conditions \citeonline{nidhra2012black}. This term was used in the context of the Google search engine, where it is not known exactly what happens internally, only that sometimes the results vary minimally, even though the search string remains the same.
 
 \section{Planning}\label{sec:gl-planning}
 
-The authors decided that it would be more interesting and add more value to the study if a systematic review was carried out in the gray literature instead of in the white literature, due to the little content of formal works published on the outreach activities management topic.
+The authors decided that it would be more interesting and add more value to the study if a systematic review was carried out in the grey literature instead of in the white literature, due to the little content of formal works published on the outreach activities management topic.
 
 \subsection{Reasons for Carrying out the Review}\label{sec:gl-planning-motives}
 
-The main reasons to include a gray literature in review in the study by the authors were the following:
+The main reasons to include a grey literature in review in the study by the authors were the following:
 \begin{inparaenum}[(i)]
   \item More search results for tools instead of formal articles;
   \item Running the search strings on white literature returned very few results;
@@ -30,7 +33,7 @@ The main reasons to include a gray literature in review in the study by the auth
   \item By searching for tools, the authors hope to find functionality ideas and inspiration for the development of the goal product itself.
 \end{inparaenum}
 
-In the \Cref{tab:questoesgarousi} are the questions used in the decision to carry out the review of the gray literature and their answers. In addition, the objectives defined for carrying out the review were:
+In the \Cref{tab:questoesgarousi} are the questions used in the decision to carry out the review of the grey literature and their answers. In addition, the objectives defined for carrying out the review were:
 
 \begin{inparaenum}[(i)]
   \item Find free tools that partially support academic management;
@@ -54,7 +57,7 @@ Furthermore, due to the scope being limited to outreach activities in Brazilian 
 
 Ultimately, the authors came up with ten search strings in total, with seven of them using the combination of the terms "\textbf{extensão} (\textbf{programa} | \textbf{projeto})", which were defined as the most relevant terms. With each string, a limit was set to use only the first ten pages returned by the search engine, resulting in one hundred records per string and, consequently, one thousand records in total.
 
-The keyword ``\acs{SIGAA}'' was removed after the first search because it is a tool used by many public universities \cite{das2013sistema}, which cluttered the results with essentially the same record, potentially hiding other solutions. The defined strings are presented in \Cref{tab:gl-strings}.
+The keyword ``\acs{SIGAA}'' was removed after the first search because it is a tool used by many public universities \citeonline{das2013sistema}, which cluttered the results with essentially the same record, potentially hiding other solutions. The defined strings are presented in \Cref{tab:gl-strings}.
 
 \input{artifacts/4-search-strings.tex}
 
@@ -82,7 +85,7 @@ In addition to applying the inclusion criteria, exclusion criteria were also def
 
 \subsection{Quality Criteria}\label{sec:gl-planning-qlty}
 
-To assess the quality of the tools that passed the inclusion and exclusion criteria, five quality criteria were defined that are focused on characteristics considered important within a tool and how it stands out from the others. To quantify the scores for each criterion, the scale used in the article by \cite{iung2020systematic} was adapted, being:
+To assess the quality of the tools that passed the inclusion and exclusion criteria, five quality criteria were defined that are focused on characteristics considered important within a tool and how it stands out from the others. To quantify the scores for each criterion, the scale used in the article by \citeonline{iung2020systematic} was adapted, being:
 \begin{inparaenum}[(i)]
   \item \textbf{Y}es: 1.0;
   \item \textbf{P}artially: 0.5;
@@ -126,7 +129,7 @@ In this section, it will be presented how the two data extractions from the foun
 
 After the research was carried out, in order to apply the quality criteria, it was necessary to create a matrix of functionalities among the filtered results. In this way, the authors were able to understand which features are present most frequently among the evaluated tools. A total of 37 features were found, some repeating themselves more than others. The matrix can be seen in \Cref{fig:gl-matrix}.
 
-\begin{figure}[htb]
+\begin{figure}[!htb]
   \caption{Feature Matrix}\label{fig:gl-matrix}
   \begin{center}
     \includegraphics[width=16cm]{img/functionality-matrix.pdf}
@@ -134,7 +137,7 @@ After the research was carried out, in order to apply the quality criteria, it w
   \fonte{Author.}
 \end{figure}
 
-The most common features among all the evaluated tools and websites were highlighted in lighter gray, so that they could be used as criteria in the next phase of data extraction.
+The most common features among all the evaluated tools and websites were highlighted in lighter grey, so that they could be used as criteria in the next phase of data extraction.
 
 \subsubsection{More Information from Important Features}\label{sec:gl-data-extraction-2}
 
@@ -146,9 +149,9 @@ In the second data extraction, the objective was to identify which information w
   \item Registration of users external to the institution.
 \end{inparaenum}
 
-Because each tool has its own attribute naming and its own format, it was difficult to standardize the analysis, so the original names were kept. Tools that did not have the selected features have been highlighted in gray instead of leaving the cells in blank, to avoid confusion. The extracted results are written in an informal way precisely because it was almost impossible to try to follow a pattern for all the tools. The extracted data can be seen in \Cref{fig:gl-additional-extraction}.
+Because each tool has its own attribute naming and its own format, it was difficult to standardize the analysis, so the original names were kept. Tools that did not have the selected features have been highlighted in grey instead of leaving the cells in blank, to avoid confusion. The extracted results are written in an informal way precisely because it was almost impossible to try to follow a pattern for all the tools. The extracted data can be seen in \Cref{fig:gl-additional-extraction}.
 
-\begin{figure}[htb]
+\begin{figure}[!htb]
   \caption{Additional Information Extraction}\label{fig:gl-additional-extraction}
   \begin{center}
     \includegraphics[width=16cm]{img/gl-data-extraction-2.pdf}
@@ -240,7 +243,7 @@ During the stages of the systematic review mapping, some threats to validity wer
 
 \section{Considerations}\label{sec:gl-considerations}
 
-Through this systematic review of the gray literature, it was possible to find tools similar to what the goal product of the whole study should be. Before conducting the review, there was no idea of the current state of the area and of which solutions are most widely used by Brazilian universities.
+Through this systematic review of the grey literature, it was possible to find tools similar to what the goal product of the whole study should be. Before conducting the review, there was no idea of the current state of the area and of which solutions are most widely used by Brazilian \ac{HEI}.
 
 A lot of valuable information about tools being used today was collected. The scope of \aclp{OA} management and processes was now much clearer. This knowledge will make a difference when implementing the goal product, which aims to be an all around solution for \ac{OA} administration.
 
