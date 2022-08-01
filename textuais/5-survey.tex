@@ -127,6 +127,15 @@ Finally, \Cref{suggestion:4} suggests that all questions that have a common subj
   \item Outreach programs and projects coordinator.
 \end{inparaenum}
 
+The questions were also assigned \ac{ID} tags for each profile, in order to create better visualizations for the collected data later on. The logic behind the naming is simple. It starts with a letter which relates to the profile that that question is directed to, and a number, which is a simple count. They are as follows:
+\begin{itemize}
+  \item \textbf{A(1-14)}: ``A'' stands for ``Aluno'', the student or participant.
+  \item \textbf{C(1-2)}: ``C'' stands for Coordinator.
+  \item \textbf{I(1)}: ``I'' is for Instructor.
+  \item \textbf{P(1-8)}: ``P'' stands for Proponent.
+\end{itemize}
+Students were directed to the A(1-14) questions, while professors and \acp{ATE} were directed to the remaining 3 categories, since they have a higher chance to perform any of these roles.
+
 \subsubsection{Feature Suggestions}
 
 For the last page of the questionnaire, a field was made available in which respondents may suggest to researchers any improvement, functionality, correction, anything they thought would be valuable for the goal product. With these answers it is possible to do a qualitative analysis and achieve new ideas for the development and completeness of the final tool.
@@ -166,19 +175,151 @@ The first item is about being certain of what is to be measured or collected. ``
 \subsection{Construct Validity}\label{sec:survey-construct-validity}
 
 As soon as the first participants started submitting their responses, it was already possible to gather valuable information and insights from the results. That being said, the following items were identified as possible threats:
-\begin{itemize}
-  \item While the questions were simple and designed to be understood by everyone, the scale used, in the other hand, could be a cause of confusion by people who are not familiar with it. Even though the MoSCoW scale was adapted and translated to Portuguese, it could still be hard to answer for those who are not used to it.
-  \item The questions were written in the form of user stories, making it easy for the participants to classify the relevance of the requirement. However, describing the questions this way could impose a threat in which the respondent might find difficult to suggest new functionalities, because the ``creative work'' was already done for them.
-  \item The lack of clarity in definitions and amibiguity might also be considered threats. In some cases, the participant could not answer because he did not know what an \ac{OA} was.
-\end{itemize}
+\begin{description}
+  \item \textbf{1.} While the questions were simple and designed to be understood by everyone, the scale used, in the other hand, could be a cause of confusion by people who are not familiar with it. Even though the MoSCoW scale was adapted and translated to Portuguese, it could still be hard to answer for those who are not used to it.
+  \item \textbf{2.} The questions were written in the form of user stories, making it easy for the participants to classify the relevance of the requirement. However, describing the questions this way could impose a threat in which the respondent might find difficult to suggest new functionalities, because the ``creative work'' was already done for them.
+  \item \textbf{3.} The lack of clarity in definitions and amibiguity might also be considered threats. In some cases, the participant could not answer because he did not know what an \ac{OA} was.
+\end{description}
 
 \subsection{External Validity}\label{sec:survey-external-validity}
 
 Regarding external validity, there are some inherent threats that come with how the scope of the study was defined. It is also impossible and unnecessary to completely neutralize this, as too much generalization would make the study less useful. Some of the threats were:
-\begin{itemize}
-  \item By the nature of the defined scope, the study is limited to participants which are familiar with the academic environment and preferably participated in an outreach activity in \ac{UNIPAMPA}.
-  \item The scope could be expanded to other \ac{HEI} without adding much risks, but then the study would become less useful, since this term paper describes a goal product directed at \ac{UNIPAMPA}.
-\end{itemize}
+\begin{description}
+  \item \textbf{1.} By the nature of the defined scope, the study is limited to participants which are familiar with the academic environment and preferably participated in an outreach activity in \ac{UNIPAMPA}.
+  \item \textbf{2.} The scope could be expanded to other \ac{HEI} without adding much risks, but then the study would become less useful, since this term paper describes a goal product directed at \ac{UNIPAMPA}.
+\end{description}
 
 \section{Results}\label{sec:survey-results}
+
+In the 18 days that the questionaire was available for responses, 123 responses from students, teachers, and \acp{ATE}s were collected. As all of the quantitative questions had an obligatory nature, a response rate of 100\% was obtained for each respondent's profile. On the other hand, when all of the qualitative questions were answered, including those on the final page of the questionnaire and those asking for general suggestions for the tool, the percentage of responses from teachers and students was approximately 23\% and 12\%, respectively. This low value was one of the factors contributing to the validity threat mentioned in Item 3 of \Cref{sec:survey-construct-validity}.
+
+The graphics related to participant identification and their participation in extensive academic activities will be presented in the following section, \Cref{sec:survey-participant-id}. The results obtained in objective and quantitative questions where the \ac{MoSCoW} requirement prioritization technique was applied are described in \Cref{sec:survey-quant}. Last but not least, in \Cref{sec:survey-quali}, the final ranking of the requirements based on the respondents' written and qualitative feedback as well as their most pertinent suggestions will be presented.
+
+% Charts source https://www.overleaf.com/read/fkzhpvsnsfhx
+
+\subsection{Respondent Identification}\label{sec:survey-participant-id}
+
+\begin{figure}[!htb]
+  \caption{Participants Sex Distribution}\label{fig:sex-distribution}
+  \begin{center}
+    \includegraphics[width=9cm]{img/5-participants-sex.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Participants Age Distribution}\label{fig:age-distribution}
+  \begin{center}
+    \includegraphics[width=10.5cm]{img/5-participants-age.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Participants Formation Distribution}\label{fig:formation-distribution}
+  \begin{center}
+    \includegraphics[width=17cm]{img/5-participants-formation.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Community Roles Distribution}\label{fig:community-roles}
+  \begin{center}
+    \includegraphics[width=11cm]{img/5-community-roles.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Participants City Distribution}\label{fig:city-distribution}
+  \begin{center}
+    \includegraphics[width=14cm]{img/5-participants-city.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Outreach Participation Distribution}\label{fig:outreach-participation}
+  \begin{center}
+    \includegraphics[width=11cm]{img/5-outreach-participation.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Outreach Roles Distribution}\label{fig:outreach-roles}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-outreach-roles.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\subsection{Quantitative Results}\label{sec:survey-quant}
+
+\subsubsection{Proponent}\label{sec:survey-quant-proponent}
+
+\begin{figure}[!htb]
+  \caption{Questions Regarding Proponent Role}\label{fig:proponent-questions}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-questions-proponent.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Which communication channel the proponent prefers}\label{fig:outreach-roles}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-questions-proponent-P7-1.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\subsubsection{Coordinator}\label{sec:survey-quant-coordinator}
+
+\begin{figure}[!htb]
+  \caption{Questions Regarding Coordinator Role}\label{fig:coordinator-questions}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-questions-coordinator.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\subsubsection{Instructor}\label{sec:survey-quant-instructor}
+
+\begin{figure}[!htb]
+  \caption{Questions Regarding Instructor Role}\label{fig:instructor-questions}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-questions-instructor.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\subsubsection{Participant}\label{sec:survey-quant-participant}
+
+\begin{figure}[!htb]
+  \caption{Questions Regarding Participant Pt.1}\label{fig:participant-1}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-questions-participant-1.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Questions Regarding Participant Pt.2}\label{fig:participant-2}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-questions-participant-2.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \caption{Where the user would rather see their upcoming \ac{OA}}\label{fig:participant-a14}
+  \begin{center}
+    \includegraphics[width=13cm]{img/5-questions-participant-A14-1.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\subsection{Qualitative Results}\label{sec:survey-quali}
 
