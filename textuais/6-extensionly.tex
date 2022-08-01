@@ -2,5 +2,46 @@
 % seção devops
 % seção analytics
 %=======================================
-\chapter{Extensionly}\label{extensionly}
+\chapter{Extensionly Frontend Design}\label{extensionly}
 %=======================================
+
+This chapter describes how the solution was developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the frontend relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles and the current state of the application, which will be presented in more detail in \Cref{ext:current-state}. \Cref{ext:requirement-engineering} presents how the system requirements were managed.
+
+It is also important to note that the terms ``frontend'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
+
+\section{Initial Considerations}\label{ext:initial-considerations}
+
+The Extensionly frontend is developed as a web application, which relates to the backend by consuming its \ac{API}. Its source code is available in the official repository\footnote{Extensionly Frontend code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the backend server for now.
+
+The system as a whole, including the backend service, was designed with multiple user roles in mind. This was a necessity identified very early on, since there are many actors involved in the \ac{OA} ecosystem in \acp{HEI}, as was presented earlier in the study. They are as follows:
+\begin{inparaenum}[(1)]
+  \item Participant - a listener, someone who enrolls to passively participate in the activity;
+  \item Instructor - a speaker, someone who presents or teaches something to participants;
+  \item Proponent - the one who proposes the \ac{OA}, usually a professor;
+  \item Coordinator - a role that can review and approve proposed activities for one campus;
+  \item Supervisor - usually does not interact with the process, but can monitor the system as a whole, having access to \ac{OA} in multiple campuses.
+\end{inparaenum}
+Initially, there was also an ``External Participant'' role, whose difference from the Participant was that no \ac{HEI} enrollment was required in order for it to enroll in \acp{OA}. It is being put on hold for now, because it is considered to be somewhat out of scope of an \ac{MVP}.
+
+The frontend development already started, though it has come to a halt lately, due to the deadlines for the term paper approaching. The current state of the tool is described in more detail in \Cref{ext:current-state}.
+
+\section{Current State}\label{ext:current-state}
+
+Regarding the current state of the web application,
+
+\section{Requirements Engineering}\label{ext:requirement-engineering}
+
+This sections aims to present in more detail how the requirements were collected and refined throughout the study. There were two (2) steps to the requirements elicitation stage. The first batch is the result of the grey literature systematic review described in detail in \Cref{greyliterature}. The second refinement of the requirements was applied after analyzing the survey results, presented earlier in \Cref{survey}.
+
+\subsection{Requirements Obtained through the Grey Literature Review}\label{ext:requirements-grey}
+
+In total, thirty two (32) requirements were defined prior to the planning and execution of the survey. These requirements were collected by analyzing other tools found during the grey literature review which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor. Some of them were too complex for an \ac{MVP}, such as \Cref{grey-reqs:related-events}.
+
+The remaining twenty six (26) were prioritized based on what was considered most critical for the application \ac{MVP}
+
+\subsection{User Stories derived from the Requirements}
+
+\section{Design Decisions}
+\subsection{Technology Stack}
+\subsection{Programming Paradigm}
+\subsection{Design Patterns}
