@@ -5,7 +5,7 @@
 \chapter{Extensionly Frontend Design}\label{extensionly}
 %=======================================
 
-This chapter describes how the solution was developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the frontend relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles and the current state of the application, which will be presented in more detail in \Cref{ext:current-state}. \Cref{ext:requirement-engineering} presents how the system requirements were managed.
+This chapter describes how the solution was developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the frontend relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles and the current state of the application, which will be presented in more detail in \Cref{ext:current-state}. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
 
 It is also important to note that the terms ``frontend'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
 
@@ -25,23 +25,31 @@ Initially, there was also an ``External Participant'' role, whose difference fro
 
 The frontend development already started, though it has come to a halt lately, due to the deadlines for the term paper approaching. The current state of the tool is described in more detail in \Cref{ext:current-state}.
 
-\section{Current State}\label{ext:current-state}
-
-Regarding the current state of the web application,
-
 \section{Requirements Engineering}\label{ext:requirement-engineering}
 
 This sections aims to present in more detail how the requirements were collected and refined throughout the study. There were two (2) steps to the requirements elicitation stage. The first batch is the result of the grey literature systematic review described in detail in \Cref{greyliterature}. The second refinement of the requirements was applied after analyzing the survey results, presented earlier in \Cref{survey}.
 
 \subsection{Requirements Obtained through the Grey Literature Review}\label{ext:requirements-grey}
 
-In total, thirty two (32) requirements were defined prior to the planning and execution of the survey. These requirements were collected by analyzing other tools found during the grey literature review which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor. Some of them were too complex for an \ac{MVP}, such as \Cref{grey-reqs:related-events}.
+In total, thirty two (28) \acp{FR} were defined prior to the planning and execution of the survey. These requirements were created after analyzing other tools found during the grey literature review, presented earlier in \Cref{sec:gl-feature-matrix}, which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor, due to some of them being too complex for an \ac{MVP} or simply out of scope. The remaining twenty two (22) were prioritized based on what was considered most critical for the application \ac{MVP}. The complete list of initial requirements and their priority ranking can be seen in \Cref{tab:initial-requirements}.
 
-The remaining twenty six (26) were prioritized based on what was considered most critical for the application \ac{MVP}
+\input{artifacts/6-initial-requirements.tex}
 
-\subsection{User Stories derived from the Requirements}
+\subsection{User Stories derived from the Requirements}\label{ext:user-stories}
 
-\section{Design Decisions}
-\subsection{Technology Stack}
-\subsection{Programming Paradigm}
-\subsection{Design Patterns}
+After the first round of defining the requirements, it was necessary to turn them into user stories, to use them in the survey, in a more descriptive form for the respondents. The stories were written with the system user roles in mind, which were presented earlier in \Cref{ext:initial-considerations}. They were used directly, with no other refinements, in the final survey and can be seen in \Cref{appendix:questionnaire}. However, in order to relate \acp{FR} with the questions and also update their ranking based on the survey results, \Cref{tab:stories-requirements-relation} was created:
+
+\input{artifacts/6-stories-requirements-relation.tex}
+
+There were some cases where multiple \acp{FR} were assigned to a single user story, because the requirements are usually more technical, while a user story is supposed to have a higher level of abstraction.
+
+% user stories used to write the survey questions
+% new priority based on survey results
+
+\section{Design Decisions}\label{ext:design-decisions}
+
+
+
+\section{Current State}\label{ext:current-state}
+
+Regarding the current state of the web application,
