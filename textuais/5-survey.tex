@@ -193,11 +193,17 @@ Regarding external validity, there are some inherent threats that come with how 
 
 In the 18 days that the questionaire was available for responses, 123 responses from students, teachers, and \acp{ATE}s were collected. As all of the quantitative questions had an obligatory nature, a response rate of 100\% was obtained for each respondent's profile. On the other hand, when all of the qualitative questions were answered, including those on the final page of the questionnaire and those asking for general suggestions for the tool, the percentage of responses from teachers and students was approximately 23\% and 12\%, respectively. This low value was one of the factors contributing to the validity threat mentioned in Item 3 of \Cref{sec:survey-construct-validity}.
 
-The graphics related to participant identification and their participation in extensive academic activities will be presented in the following section, \Cref{sec:survey-participant-id}. The results obtained in objective and quantitative questions where the \ac{MoSCoW} requirement prioritization technique was applied are described in \Cref{sec:survey-quant}. Last but not least, in \Cref{sec:survey-quali}, the final ranking of the requirements based on the respondents' written and qualitative feedback as well as their most pertinent suggestions will be presented.
+The charts related to participant identification and their participation in outreach academic activities will be presented in the following section, \Cref{sec:survey-participant-id}. The results obtained in objective and quantitative questions where the \ac{MoSCoW} requirement prioritization technique was applied are described in \Cref{sec:survey-quant}. Last but not least, in \Cref{sec:survey-quali}, the final ranking of the requirements based on the respondents' written and qualitative feedback as well as their most pertinent suggestions will be presented.
 
 % Charts source https://www.overleaf.com/read/fkzhpvsnsfhx
 
 \subsection{Respondent Identification}\label{sec:survey-participant-id}
+
+This section presents information pertaining to the respondent profile and the survey's demographic is depicted. \Cref{fig:sex-distribution} and \Cref{fig:age-distribution} show that most of the respondents identify as the female gender, while also being within the 19-39 age ranges. This information is relevant to understand the demographic, which is comprised mostly by college students, as can be seen in \Cref{fig:formation-distribution} and \Cref{fig:community-roles}.
+
+Another important piece of information obtained through analyzing the identification results is the city and campuses most respondents come from. As it was shown earlier in \Cref{fig:number-of-projects}, more students from Uruguaiana - the campus which executed most \aclp{OA} in 2021 - were expected to respond, which was not the case, as can be seen in \Cref{fig:city-distribution}.
+
+Lastly, it is presented the charts regarding the participation of respondents in \acp{OA}. \Cref{fig:outreach-participation} shows an interesting result. Over a quarter of respondents have never participated, not even as listeners, in an \ac{OA}. This posed a possible threat, described in Item 3 of \Cref{sec:survey-construct-validity}. Finally, \Cref{fig:outreach-roles} aims to map the roles each respondent had when participating in \acp{OA}. Over half of them had participated as listeners.
 
 \begin{figure}[!htb]
   \caption{Participants Sex Distribution}\label{fig:sex-distribution}
@@ -257,7 +263,21 @@ The graphics related to participant identification and their participation in ex
 
 \subsection{Quantitative Results}\label{sec:survey-quant}
 
+The quantitative results were gathered by asking objective questions in which the respondant had to prioritize the user story in the question using the MoSCoW scale, described earlier.
+
+By analyzing the results obtained in each of the questions asked in the questionnaire, which is available at \Cref{appendix:questionnaire}\footnote{As a note, to better navigate from the charts to the questions themselves, which are all the way down in the appendix, open the PDF in the browser and hit ``CTRL + F'', searching for the question \ac{ID} and using the arrows to navigate between occurrences.}, some interesting results were found regarding each user role defined for the \ac{MVP}, which are going to be discussed later in more detail in \Cref{ext:initial-considerations}. The following sections describe the results obtained on each of their quantitative questions. The roles are as follows:
+\begin{inparaenum}[(a)]
+  \item Proponent,
+  \item Coordinator,
+  \item Instructor and
+  \item Participant.
+\end{inparaenum}
+
 \subsubsection{Proponent}\label{sec:survey-quant-proponent}
+
+Regarding the proponent role, the results collected were a success. The presented written survey questions identified by P(1-8) were on point, with most of them scoring Musts and Should haves as it can be seen in \Cref{fig:proponent-questions}, meaning they are great features which the future target users would like to see in the system. The only exceptions were P2 and P5, scoring the most of Could and Will not haves out of all of the questions.
+
+A sub question of the user story described by P7 can be seen in \Cref{fig:p7-question}. The respondents could check both alternatives for communicating with the future \ac{OA} participants, and it was unexpected that \textit{WhatsApp} got over half of votes, considering the history of using emails most of the time for communication in the university.
 
 \begin{figure}[!htb]
   \caption{Questions Regarding Proponent Role}\label{fig:proponent-questions}
@@ -268,7 +288,7 @@ The graphics related to participant identification and their participation in ex
 \end{figure}
 
 \begin{figure}[!htb]
-  \caption{Which communication channel the proponent prefers}\label{fig:outreach-roles}
+  \caption{Which communication channel the proponent prefers}\label{fig:p7-question}
   \begin{center}
     \includegraphics[width=13cm]{img/5-questions-proponent-P7-1.pdf}
   \end{center}
@@ -276,6 +296,8 @@ The graphics related to participant identification and their participation in ex
 \end{figure}
 
 \subsubsection{Coordinator}\label{sec:survey-quant-coordinator}
+
+Not many questions were asked about this user role. It was interesting to see the first question, C1, not receiving as much Must haves as C2, since it was assumed that the review and approval process of \acp{OA} was as much if not more important than issuing participation certificates. The results can be seen in \Cref{fig:coordinator-questions}.
 
 \begin{figure}[!htb]
   \caption{Questions Regarding Coordinator Role}\label{fig:coordinator-questions}
@@ -287,6 +309,8 @@ The graphics related to participant identification and their participation in ex
 
 \subsubsection{Instructor}\label{sec:survey-quant-instructor}
 
+As it was realized before, the survey respondents value greatly the issuance of participation certificates. The same can be said for the only question regarding the Instructor role, which can be seen in \Cref{fig:instructor-questions}. Having over 60\% Must haves, it's one of the user stories with highest priority in the study.
+
 \begin{figure}[!htb]
   \caption{Questions Regarding Instructor Role}\label{fig:instructor-questions}
   \begin{center}
@@ -296,6 +320,14 @@ The graphics related to participant identification and their participation in ex
 \end{figure}
 
 \subsubsection{Participant}\label{sec:survey-quant-participant}
+
+This is where most of the survey demographics was directed to. Since all of the students were chosen to respond only to the participant system user role, while the professors and \acp{ATE} answered for three different profiles, a balanced number of questions was aimed for. In total, students had 14 questions, while teachers and \acp{ATE} had 11.
+
+The results are divided in two charts, the first can be seen in \Cref{fig:participant-1} and presents the first 1-7 questions, while the second, shown in \Cref{fig:participant-2} displays the last 8-14 questions. It was great to see the respondents prioritizing most of the user stories as Must haves, especially the first seven (7), meaning the requirements were once again well described and important for the system. However, not all of them were ranked highly, such as A11 and A13, which showed an above average number for Could and Will not haves.
+
+A11 makes sense, since it could be hard to think as someone who is not enrolled in the university. This user story is also a little bit of out scope for an \ac{MVP}, so the feedback was important to rank it lower in the requirements. A13 was a bold feature, which came up during a brainstorm with the supervisor. It's interesting to see it wasn't as exciting for the respondents as it was when the idea of assigning grades to \acp{OA} was conceived.
+
+Lastly, A14 had a sub question, similar to P7, in which respondents should choose where they would rather see the upcoming \acp{OA} they were enrolled in. Implementing a calendar view in the website itself could be very time consuming, so it was great to know beforehand that the majority of users would rather export the \ac{OA} to their own calendar apps.
 
 \begin{figure}[!htb]
   \caption{Questions Regarding Participant Pt.1}\label{fig:participant-1}
