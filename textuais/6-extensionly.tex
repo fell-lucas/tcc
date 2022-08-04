@@ -5,13 +5,13 @@
 \chapter{Extensionly Frontend Design}\label{extensionly}
 %=======================================
 
-This chapter describes how the solution was developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the frontend relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles and the current state of the application, which will be presented in more detail in \Cref{ext:current-state}. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
+This chapter describes how the solution will be developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the frontend relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
 
 It is also important to note that the terms ``frontend'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
 
 \section{Initial Considerations}\label{ext:initial-considerations}
 
-The Extensionly frontend is developed as a web application, which relates to the backend by consuming its \ac{API}. Its source code is available in the official repository\footnote{Extensionly Frontend code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the backend server for now.
+The Extensionly frontend will be developed as a web application, which relates to the backend by consuming its \ac{API}. The source code will be available in the official repository\footnote{Extensionly Frontend code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the backend server for now.
 
 The system as a whole, including the backend service, was designed with multiple user roles in mind. This was a necessity identified very early on, since there are many actors involved in the \ac{OA} ecosystem in \acp{HEI}, as was presented earlier in the study. They are as follows:
 \begin{inparaenum}[(1)]
@@ -23,15 +23,13 @@ The system as a whole, including the backend service, was designed with multiple
 \end{inparaenum}
 Initially, there was also an ``External Participant'' role, whose difference from the Participant was that no \ac{HEI} enrollment was required in order for it to enroll in \acp{OA}. It is being put on hold for now, because it is considered to be somewhat out of scope of an \ac{MVP}.
 
-The frontend development already started, though it has come to a halt lately, due to the deadlines for the term paper approaching. The current state of the tool is described in more detail in \Cref{ext:current-state}.
-
 \section{Requirements Engineering}\label{ext:requirement-engineering}
 
 This sections aims to present in more detail how the requirements were collected and refined throughout the study. There were two (2) steps to the requirements elicitation stage. The first batch is the result of the grey literature systematic review described in detail in \Cref{greyliterature}. The second refinement of the requirements was applied after analyzing the survey results, presented earlier in \Cref{survey}.
 
 \subsection{Requirements Obtained through the Grey Literature Review}\label{ext:requirements-grey}
 
-In total, thirty two (28) \acp{FR} were defined prior to the planning and execution of the survey. These requirements were created after analyzing other tools found during the grey literature review, presented earlier in \Cref{sec:gl-feature-matrix}, which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor, due to some of them being too complex for an \ac{MVP} or simply out of scope. The remaining twenty two (22) were prioritized based on what was considered most critical for the application \ac{MVP}. The complete list of initial requirements and their priority ranking can be seen in \Cref{tab:initial-requirements}.
+In total, twenty eight (28) \acp{FR} were defined prior to the planning and execution of the survey. These requirements were created after analyzing other tools found during the grey literature review, presented earlier in \Cref{sec:gl-feature-matrix}, which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor, due to some of them being too complex for an \ac{MVP} or simply out of scope. The remaining twenty two (22) were prioritized based on what was considered most critical for the application \ac{MVP}. The complete list of initial requirements and their priority ranking can be seen in \Cref{tab:initial-requirements}.
 
 \input{artifacts/6-initial-requirements.tex}
 
@@ -48,8 +46,37 @@ There were some cases where multiple \acp{FR} were assigned to a single user sto
 
 \section{Design Decisions}\label{ext:design-decisions}
 
+The decisions made regarding the development of the goal product are discussed in this section.
 
+\begin{description}
+  \item[\textbf{Programming Language:}] \ac{TS} was chosen because of the incredible ecosystem of tools and technologies built around it. It expands the capabilities of common \ac{JS}, a dynamic typed language, by enforcing the usage of types in it. This makes it more strict, which increases robustness and predictiveness.
+  \item[\textbf{Architecture:}] The architecture comes with the chosen framework the tool is being developed in: NextJS with React. The \ac{UI} is component based, meaning each element can be treated as an individual component, such as buttons and cards. It enables reusability, reducing duplicated code and in consequence, less convoluted applications. The website the user sees is a tree where each node is a component. The architecture can be seen in \Cref{fig:arch}.
 
-\section{Current State}\label{ext:current-state}
+    \begin{figure}[!htb]
+      \caption{Frontend Architecture}\label{fig:arch}
+      \begin{center}
+        \includegraphics[width=14cm]{img/6-architecture.png}
+      \end{center}
+      \fonte{Author.}
+    \end{figure}
 
-Regarding the current state of the web application,
+    Regarding NextJS, it was chosen because of its \ac{SSR} capabilities. This greatly reduces loading times for the user, because the whole page document with its \ac{HTML} tags are pre generated on the application server and delivered all at once when the page loads. This is not normally the case for React applications, which rely on \ac{CSR}. With this approach, the React framework sends the bare minimum information needed in the first load, followed by a loading spinner to the user while the page itself is generated locally in the user's browser. \Cref{fig:ssr} and \Cref{fig:csr} aim to illustrate this behavior.
+
+    \begin{figure}[!htb]
+      \caption{\acl{CSR}}\label{fig:csr}
+      \begin{center}
+        \includegraphics[width=14cm]{img/6-csr.png}
+      \end{center}
+      \fonte{Author.}
+    \end{figure}
+
+    \begin{figure}[!htb]
+      \caption{\acl{SSR}}\label{fig:ssr}
+      \begin{center}
+        \includegraphics[width=14cm]{img/6-ssr.png}
+      \end{center}
+      \fonte{Author.}
+    \end{figure}
+  \item[\textbf{License:}] The frontend web application is licensed under the GNU General Public License v3.0, which is an open source license and is very permissive, allowing even for commercial use. It does not provider however, any kind of warranty or liability regarding the software \cite{gnugpl3}.
+
+\end{description}
