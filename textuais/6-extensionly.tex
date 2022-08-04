@@ -2,16 +2,16 @@
 % seção devops
 % seção analytics
 %=======================================
-\chapter{Extensionly Frontend Design}\label{extensionly}
+\chapter{Extensionly Front end Design}\label{extensionly}
 %=======================================
 
-This chapter describes how the solution will be developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the frontend relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
+This chapter describes how the solution will be developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the front end relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
 
-It is also important to note that the terms ``frontend'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
+It is also important to note that the terms ``front end'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
 
 \section{Initial Considerations}\label{ext:initial-considerations}
 
-The Extensionly frontend will be developed as a web application, which relates to the backend by consuming its \ac{API}. The source code will be available in the official repository\footnote{Extensionly Frontend code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the backend server for now.
+The Extensionly front end will be developed as a web application, which relates to the backend by consuming its \ac{API}. The source code will be available in the official repository\footnote{Extensionly front end code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the backend server for now.
 
 The system as a whole, including the backend service, was designed with multiple user roles in mind. This was a necessity identified very early on, since there are many actors involved in the \ac{OA} ecosystem in \acp{HEI}, as was presented earlier in the study. They are as follows:
 \begin{inparaenum}[(1)]
@@ -53,7 +53,7 @@ The decisions made regarding the development of the goal product are discussed i
   \item[\textbf{Architecture:}] The architecture comes with the chosen framework the tool is being developed in: NextJS with React. The \ac{UI} is component based, meaning each element can be treated as an individual component, such as buttons and cards. It enables reusability, reducing duplicated code and in consequence, less convoluted applications. The website the user sees is a tree where each node is a component. The architecture can be seen in \Cref{fig:arch}.
 
     \begin{figure}[!htb]
-      \caption{Frontend Architecture}\label{fig:arch}
+      \caption{Front end Architecture}\label{fig:arch}
       \begin{center}
         \includegraphics[width=14cm]{img/6-architecture.png}
       \end{center}
@@ -77,6 +77,6 @@ The decisions made regarding the development of the goal product are discussed i
       \end{center}
       \fonte{Author.}
     \end{figure}
-  \item[\textbf{License:}] The frontend web application is licensed under the GNU General Public License v3.0, which is an open source license and is very permissive, allowing even for commercial use. It does not provider however, any kind of warranty or liability regarding the software \cite{gnugpl3}.
+  \item[\textbf{License:}] The front end web application is licensed under the GNU General Public License v3.0, which is an open source license and is very permissive, allowing even for commercial use. It does not provider however, any kind of warranty or liability regarding the software \cite{gnugpl3}.
 
 \end{description}
