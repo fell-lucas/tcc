@@ -33,8 +33,7 @@
 % http://porteiras.r.unipampa.edu.br/portais/sisbi/programa-de-capacitacao/
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\documentclass[12pt,openright,twoside,a4paper,chapter=TITLE]{abntex2}    % frente e verso
-%\documentclass[12pt,oneside,a4paper]{abntex2}            % apenas frente
+\documentclass[12pt,openright,twoside,a4paper,chapter=TITLE,english]{abntex2}    % frente e verso
 
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % PACOTES
@@ -45,16 +44,13 @@
 \usepackage[T1]{fontenc}    % Seleção de codificação de fonte
 \usepackage[utf8]{inputenc} % Codificação do arquivo (conversão automática dos acentos)
 \usepackage{makeidx}        % Criação de índice
+\usepackage[style=abnt,backref=true]{biblatex}
 \usepackage{hyperref}       % Formatação do índice
 \usepackage{lastpage}       % Usado pela Ficha catalográfica
 \usepackage{indentfirst}    % Indenta o primeiro parágrafo de cada seção
 \usepackage[usenames,dvipsnames]{xcolor}  % Controle das cores (com nomes)
 \usepackage{graphicx}       % Inclusão de gráficos
 \usepackage{booktabs}       % Formatação de tabelas
-% -------------------------------------------------------------------------------------------------
-% Para citações
-\usepackage[brazilian,hyperpageref]{backref} % Páginas com as citações na bibliografia
-\usepackage[alf,abnt-emphasize=bf]{abntex2cite} % Citações padrão ABNT (alfanumérico)
 % -------------------------------------------------------------------------------------------------
 % Pacotes opcionais
 \usepackage{nomencl}        % Para criar uma lista de símbolos
@@ -63,11 +59,6 @@
 \usepackage{pgfplots}       % Usa o pacote tikz para fazer gráficos muito melhores que os do Excel
 \usepackage{pgfplotstable}  % Para gerar tabelas automaticamente a partir de arquivos com dados
 \usepackage{filecontents}   % Para colocar o conteúdo de um arquivo dentro de um arquivo tex
-%\usepackage{multirow}       % Permite fazer tabelas com múltiplas linhas
-%\let\newfloat=\undefined    % Workaround para usar o pacote algorithm
-%\usepackage{algorithm}      % Para escrever algoritmos
-%\usepackage{clrscode}       % Para escrever algoritmos
-%\usepackage{clrscode3e}     % Para escrever algoritmos; mais simples que os pacotes acima
 \usepackage{pdfpages}        % Para incluir a folha de aprovação assinada em PDF
 \usepackage[olditem]{paralist}       % Listas in-line
 \usepackage{colortbl}
@@ -105,36 +96,11 @@
   \renewcommand{\subsectionautorefname}{subsection}
   \renewcommand{\subsubsectionautorefname}{subsubsection}
   \renewcommand{\paragraphautorefname}{subsubsubsection}
-  \renewcommand{\englishbibname}{Bibliography}
-  \renewcommand{\englishindexname}{Index}
-  \renewcommand{\englishlistfigurename}{List of figures}
-  \renewcommand{\englishfigurename}{Figure}
-  \renewcommand{\englishlisttablename}{List of tables}
-  \renewcommand{\englishtablename}{Table}
-  \renewcommand{\englishcontentsname}{List of contents}
-  \renewcommand{\englishchaptername}{Chapter}
   \renewcommand{\imprimirtipotrabalho}{Term Paper }
 }
 
 \pgfplotsset{compat=1.18}
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Cited in page(s):~}
-\renewcommand*{\backrefsep}{,~}%
-\renewcommand*{\backreftwosep}{,~}% ', and~'
-\renewcommand*{\backreflastsep}{,~}% ' and~'
-% Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-    \ifcase #1 %
-        No text citation.%
-    \or
-        Cited in page #2.%
-    \else
-        Cited #1 times on pages #2.%
-    \fi}%
-% -------------------------------------------------------------------------------------------------
+
 % Configurações de aparência do PDF final
 %\definecolor{blue}{RGB}{41,5,195}
 % \definecolor{webgreen}{rgb}{0,.5,0}
@@ -204,7 +170,7 @@
 obtaining the title of Software Engineering
 Bachelor}
 
-
+\addbibresource{bibliografia.bib}
 \makeindex % Compila o indice
 \makenomenclature % Compila a lista de abreviaturas e siglas
 \input{acro}
@@ -253,11 +219,11 @@ Bachelor}
 \input{textuais/6-extensionly}
 \input{textuais/7-conclusao} % [OBRIGATORIO]
 
-
 % ELEMENTOS PÓS-TEXTUAIS
 \postextual
 
-\bibliography{bibliografia} % Bibliografia [OBRIGATORIO]
+\printbibliography[title={References}]
+
 \input{postextuais/apendices} % Apêndices [OPCIONAL]
 \input{postextuais/anexos} % Anexos [OPCIONAL]
 \printindex % Índice Remissivo [OPCIONAL]

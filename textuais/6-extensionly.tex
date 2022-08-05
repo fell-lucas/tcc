@@ -24,7 +24,7 @@ This sections aims to present in more detail how the requirements were collected
 
 \subsection{Requirements Obtained through the Grey Literature Review}\label{ext:requirements-grey}
 
-In total, twenty eight (28) \acp{FR} were defined prior to the planning and execution of the survey. \citeonline{Clarkson2005-sy} explains that \acp{FR} have the purpose to establish the behavior between inputs and outputs that characterizes a system's or component's function.
+In total, twenty eight (28) \acp{FR} were defined prior to the planning and execution of the survey. \textcite{Clarkson2005-sy} explains that \acp{FR} have the purpose to establish the behavior between inputs and outputs that characterizes a system's or component's function.
 
 These requirements were created after analyzing other tools found during the grey literature review, presented earlier in \Cref{sec:gl-feature-matrix}, which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor, due to some of them being too complex for an \ac{MVP} or simply out of scope. The remaining twenty two (22) were prioritized based on what was considered most critical for the application \ac{MVP}. The complete list of initial requirements and their priority ranking can be seen in \Cref{tab:initial-requirements}.
 
@@ -58,7 +58,7 @@ There were some cases where multiple \acp{FR} were assigned to a single user sto
 
 \subsubsection{User Roles}\label{ext:user-roles}
 
-The system as a whole, including the back-end service, was designed with multiple user roles, or actors, in mind. According to \citeonline{omg_2017}, in the Unified Modeling Language, an actor designates a function performed by a user or by any other system that communicates with the subject. In this case, it was referred as the user.
+The system as a whole, including the back-end service, was designed with multiple user roles, or actors, in mind. According to \textcite{omg_2017}, in the Unified Modeling Language, an actor designates a function performed by a user or by any other system that communicates with the subject. In this case, it was referred as the user.
 
 This was a necessity identified very early on, since there are many actors involved in the \ac{OA} ecosystem in \acp{HEI}, as was presented earlier in the study. They are as follows:
 \begin{description}
@@ -86,9 +86,9 @@ The decisions made regarding the development of the goal product are discussed i
       \fonte{Author.}
     \end{figure}
 
-    Regarding NextJS, it was chosen because it extends React by enabling \ac{SSR}\footnote{The term \ac{SSI} is used by \citeonline{DBLP:journals/corr/abs-0801-2618}, but is interchangeable with \acl{SSR}.} capabilities. This greatly reduces loading times for the user, because the whole page document with its \ac{HTML} - the standard markup language for documents designed to be displayed in a web browser \cite{patel2013incremental} - tags are pre generated on the application server and delivered all at once when the page loads \cite{DBLP:journals/corr/abs-0801-2618}.
+    Regarding NextJS, it was chosen because it extends React by enabling \ac{SSR}\footnote{The term \ac{SSI} is used by \textcite{DBLP:journals/corr/abs-0801-2618}, but is interchangeable with \acl{SSR}.} capabilities. This greatly reduces loading times for the user, because the whole page document with its \ac{HTML} - the standard markup language for documents designed to be displayed in a web browser \cite{patel2013incremental} - tags are pre generated on the application server and delivered all at once when the page loads \cite{DBLP:journals/corr/abs-0801-2618}.
 
-    However, this is not normally the case for React applications, which rely commonly on \ac{CSR}\footnote{The term \ac{CSI} is used by \citeonline{DBLP:journals/corr/abs-0801-2618}, but is interchangeable with \acl{CSR}.}. With this approach, the React framework sends the bare minimum information needed in the first load, followed by a loading screen to the user until the page itself is generated locally in the user's browser \cite{DBLP:journals/corr/abs-0801-2618}. \Cref{fig:csr} and \Cref{fig:ssr} aim to illustrate this behavior.
+    However, this is not normally the case for React applications, which rely commonly on \ac{CSR}\footnote{The term \ac{CSI} is used by \textcite{DBLP:journals/corr/abs-0801-2618}, but is interchangeable with \acl{CSR}.}. With this approach, the React framework sends the bare minimum information needed in the first load, followed by a loading screen to the user until the page itself is generated locally in the user's browser \cite{DBLP:journals/corr/abs-0801-2618}. \Cref{fig:csr} and \Cref{fig:ssr} aim to illustrate this behavior.
 
     This approach has a number of drawbacks, including the inability to support users who do not have JavaScript enabled, potential security risks, much longer page load times, and negative effects on the site's overall \ac{SEO} \cite{Thakkar2020}.
 
