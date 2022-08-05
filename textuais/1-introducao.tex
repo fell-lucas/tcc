@@ -4,73 +4,63 @@
 \chapter{Introduction}\label{introduction}
 %=========================================
 
-This work is part of a collaborative effort by two students from the Software Engineering course. Since the complexity and size of the problem were bigger than what the academy is used to seeing on term papers, the work was split among both authors. This decision was supported and previously agreed upon by their supervisor.
+This work is part of a collaborative effort by two students from the Software Engineering course. Since the complexity and size of the problem were bigger than what the academy is used to seeing on \acp{TP}, the work was split among both authors. This decision was supported and previously agreed upon by their supervisor.
 
-The effort was separated as follows: While this paper encompasses all of the front-end system requirements, such as analytics, multiple languages, component styling, design of the pages with the user interface and user experience, the counterpart focuses heavily on the back-end system requirements. Both projects are separate implementations and live in different version control repositories, and both have their own specific DevOps pipelines and deployments.
+The effort was separated as follows: While this paper encompasses all of the front end system requirements, such as analytics, multiple languages, component styling, design of the pages with the user interface and user experience, the counterpart focuses heavily on the back end system requirements. Both projects are going to be separate implementations, will live in different version control repositories and both will have their own specific DevOps pipelines and deployments.
 
-The \acl{UNIPAMPA} offers several opportunities for students to participate in environments external to the university. According to the 317th CONSUNI Resolution from April 29th, 2021, an outreach activity can be described as the following: An action that integrates the curricular matrix and the organization of research, constituting an interdisciplinary, political, educational, cultural, scientific and technological process \citeonline{res317}. It also promotes the transforming interaction between \ac{UNIPAMPA} and society, through the production and application of knowledge, in permanent articulation with teaching and research.
+The \acl{UNIPAMPA} provides a number of options for students to engage in environments outside of the institution. An outreach activity can be defined as the following, in accordance with the 317th CONSUNI Resolution from April 29, 2021: An action that integrates the curriculum matrix and the organization of research, constituting an interdisciplinary, political, educational, cultural, scientific, and technological process \citeonline{res317}. Additionally, it fosters the development and use of knowledge in constant articulation with teaching and research, which transforms the interaction between \ac{UNIPAMPA} and society.
 
 There are four (4) different modalities for outreach activities \citeonline{res317}:
 \begin{inparaenum}[(i)]
-  \item Program: a set of actions that are oriented towards a common objective, with a medium to long term duration;
-  \item Project: usually linked to a Program, it has a specific objective and a fixed term;
+  \item Program: a series of actions with a medium to long-term time frame that are focused on a single goal;
+  \item Project: it is typically associated with a Program and has a clear goal and a set duration;
   \item Course: training activity, with short duration, and;
   \item Event: an action with an artistic, cultural and scientific character, with a well-defined duration.
 \end{inparaenum}
 
-An example is the JEDI Program, which aims to solve local problems and stimulate capacity building and training in \acl{IT} (\ac{IT}) with the involvement of the community (academic and external) together with public or private companies \cite{chamadaJedi}.
+As an illustration, consider the JEDI Program, which enlists the help of the local community (both academic and non-academic) as well as public or private businesses to address local issues and promote capacity building and IT training \cite{chamadaJedi}.
 
-To register a new \acl{OCA}, it is first necessary to identify whether it is a Specific or Linked \ac{OCA} - whether it is linked to an Undergraduate Curriculum Component or not. The \ac{OCA} insertion process is carried out at the \acl{PROEXT} (\ac{PROEXT}) of Unipampa. Once registered, the course committee will need to appoint one or more professors as outreach supervisors \cite{res317}.
+To register a new \ac{OA}, it is first necessary to identify whether it is a Specific or Linked \ac{OA} - whether it is linked to an Undergraduate Curriculum Component or not. The \ac{OA} insertion process is carried out at the \ac{PROEXT} of \ac{UNIPAMPA}. Once registered, the course committee will need to appoint one or more professors as outreach supervisors \cite{res317}.
 
-Among the supervisor's responsibilities are: the evaluation of the formative nature of the action carried out by the student, the validation of the use of Specific \acp{OCA} and also the construction and dissemination of a biannual report containing the outreach activities carried out in the course.
+The supervisor's duties also include creating and disseminating a biannual report detailing the outreach efforts conducted during the course, validating the use of Specific \acp{OA}, and evaluating the formative character of the action carried out by the student.
 
-After contacting the supervisor, showing interest in an \ac{OCA}, it is the student's responsibility to request the use and validation of the hours spent in the activity with the Academic Secretary of the course \cite{res317}. And the professor is responsible for selecting and enrolling each student interested in the \ac{OCA}, until there are open slots.
+The student is responsible for requesting the use and validation of the hours spent in the activity with the Academic Secretary of the course after contacting the supervisor and expressing interest in an \ac{OA} \cite{res317}. Additionally, the professor is in charge of choosing and enrolling any student who expresses interest in the \ac{OA} program up until there are openings.
 
-%------------------------------------------------------------------------------
 \section{Motivation}\label{sec:motivation}
-%------------------------------------------------------------------------------
 
-It's not a mystery that time is of utmost importance on the academic environment. It is an invaluable resource, and as such, must be dealt with with great care. Thinking about time is what drives this project forward, as currently, there is no solution to take care of all the requirements of creating and managing outreach activities in \ac{UNIPAMPA}.
+It should come as no surprise that time is crucial in the academic setting. Because it is such a valuable resource, it needs to be handled with extreme caution. As there is currently no solution to handle all the requirements of generating and administering outreach programs in \ac{UNIPAMPA}, time is what propels this initiative forward.
 
-In 2023, due to Res. Nº317 \cite{res317}, the process of curricularization of new \acl{OCA} will be obligatorily implemented by \aclp{HEI} in Brazil. However, all management would be carried out manually by the coordinator or collaborators of the Outreach Programs and Projects. With that in mind, a number of issues were identified with this manual approach that would be easily resolved by introducing a tool to support the management process.
+The process of curricularization of the new \ac{OA} will be mandatedly implemented by \ac{HEI} in Brazil starting in 2023 as a result of Res. No317 \cite{res317}. However, the coordinator or other team members of the Outreach Programs and Projects would handle all management manually. In light of this, a number of problems with this manual method were found that might be easily resolved by adding a tool to assist the management process.
 
-This means that everything - from developing a project, submitting and having it approved, sending emails and creating registration forms to open it for the students to join and later on receive their participation certificate - has to be manually done by the professors and coordinators. From the student's perspective, there is a possibility that one or more of the offers will go unnoticed amid the large amount of emails received daily from the university. The whole process is unoptimized, and takes a great amount of time and effort to be concluded.
-
-So in order to create a more efficient and welcoming environment for the outreach activities in \acp{HEI}, the idea of a system to support the needs of this whole process was conceived.
+This implies that the professors and coordinators must personally complete everything, including constructing a project, submitting and getting it authorized, sending emails and making registration forms to open it for the students to join and eventually earn their participation certificate. Given the numerous emails the student receives from the institution each day, it is possible that one or more of the offers will go overlooked. The entire process is not optimized and requires a lot of time and work to complete.
 
 Also due to the institutional program ``Unipampa Cidadã'' (Unipampa Citizen) - which aims to dedicate a portion of the hours currently invested in outreach activities in projects and areas of great social relevance - it is expected that the enrollment rate of new students in higher education will increase \cite{unipampacidada}, which consequently highlights even more the importance of automating manual processes at the university.
 
-%------------------------------------------------------------------------------
 \section{Research Aims and Objectives}\label{sec:objectives}
-%------------------------------------------------------------------------------
 
-According to what has been presented, this Term Paper has the research aim of developing the front-end part of a tool in which all the current management of \acp{OCA} will be carefully observed and reproduced, in order to reduce the effort of the professors and supervisors with the manual steps of the process.
+According to what has been presented, this \ac{TP} has the research aim of developing the front-end part of a tool in which all the current management of \acp{OA} will be carefully observed and reproduced, in order to reduce the effort of the professors and supervisors with the manual steps of the process.
 
-In order to achieve the research aim, the following research objectives were defined:
+In order to achieve this, the following research objectives were defined:
 
 \begin{itemize}
   \item Systematically review grey literature works and products in order to find similar solutions, collecting the first batch of requirements.
   \item Elaborate a survey, according to \citeonline{kasunic2005designing}, in order to discover new system requirements and in order to better understand the target users' needs.
   \item Analyze the results and refine the elicited requirements to create tangible tasks and an implementation roadmap.
   \item Study current market technologies, programming languages and frameworks to build a stack which delivers a great user experience and is creates a codebase that is easily maintained.
-  \item Create a working \acl{MVP} (\ac{MVP}) of the system which implements at first the most critical collected and refined requirements.
+  \item Create a working \ac{MVP} of the system which implements at first the most critical collected and refined requirements.
 \end{itemize}
 
 \Cref{tbl:intro-objectives} also describes the research aim and questions.
 
 \input{artifacts/1-objectives.tex}
 
-%------------------------------------------------------------------------------
 \section{Contribution}\label{sec:contribution}
-%------------------------------------------------------------------------------
 
-The main contribution of this study is the implementation of an \ac{MVP}, in the form of a web application, to support and automate the whole process of \aclp{OCA} in the university. It also aims to generate valuable artifacts about the state of outreach activities management tooling and support in Brazil, such as a grey literature review. A survey is also conducted, aiming to better understand the needs of outreach participants regarding this specific kind of tooling. Due to the complexity of this proposal, as previously mentioned, the effort was split amongst two Term Papers. This one focuses on the development of a web app, with all its related challenges, but it doesn't encompasses the backend services in detail.
+The main contribution of this study will be the implementation of an \ac{MVP}, in the form of a web application, to support and automate the whole process of \acp{OA} in the university. It also aims to generate valuable artifacts about the state of outreach activities management tooling and support in Brazil, such as a grey literature review. A survey is also conducted, aiming to better understand the needs of outreach participants regarding this specific kind of tooling. Due to the complexity of this proposal, as previously mentioned, the effort was split amongst two \acp{TP}. This one focuses on the development of a web app, with all its related challenges, but it doesn't encompasses the back end services in detail.
 
-As for the artifacts generated to support the research, such as the grey literature systematic review and the survey, all of them were done in conjunction by both authors and are not related specifically to a single work.
+As for the artifacts generated to support the research, such as the grey literature systematic review and the survey, all of them were done in conjunction by both authors and are not related specifically to a single work. The other author is Igor Dalepiane da Costa.
 
-%------------------------------------------------------------------------------
 \section{Organization}\label{sec:organization}
-%------------------------------------------------------------------------------
 
 This document is organized according the following chapters:
 
