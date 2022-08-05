@@ -2,26 +2,21 @@
 % seção devops
 % seção analytics
 %=======================================
-\chapter{Extensionly Front end Design}\label{extensionly}
+\chapter{Extensionly Front-end Design}\label{extensionly}
 %=======================================
 
-This chapter describes how the solution will be developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the front end relates to the other term paper written about Extensionly, which focuses on the backend implementation. The chapter also discusses user roles. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
+This chapter describes how the solution will be developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the front-end relates to the other \ac{TP} written about Extensionly, which focuses on the back-end implementation. The chapter also discusses user roles. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
 
-It is also important to note that the terms ``front end'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
+It is also important to note that the terms ``front-end'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
 
 \section{Initial Considerations}\label{ext:initial-considerations}
 
-The Extensionly front end will be developed as a web application, which relates to the backend by consuming its \ac{API}. The source code will be available in the official repository\footnote{Extensionly front end code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the backend server for now.
+The Extensionly front-end will be developed as a web application, which relates to the back-end by consuming its \ac{API}, - a collection of established guidelines that describe how programs or computers communicate with one another \cite{ibmapi}. The project will be versioned using Git, a version control system made to manage any project, no matter how big or small, quickly and effectively \cite{chacon2014pro}. The source code will be available in the official repository\footnote{Extensionly front-end code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the back-end server for now.
 
-The system as a whole, including the backend service, was designed with multiple user roles in mind. This was a necessity identified very early on, since there are many actors involved in the \ac{OA} ecosystem in \acp{HEI}, as was presented earlier in the study. They are as follows:
-\begin{inparaenum}[(1)]
-  \item Participant - a listener, someone who enrolls to passively participate in the activity;
-  \item Instructor - a speaker, someone who presents or teaches something to participants;
-  \item Proponent - the one who proposes the \ac{OA}, usually a professor;
-  \item Coordinator - a role that can review and approve proposed activities for one campus;
-  \item Supervisor - usually does not interact with the process, but can monitor the system as a whole, having access to \ac{OA} in multiple campuses.
-\end{inparaenum}
-Initially, there was also an ``External Participant'' role, whose difference from the Participant was that no \ac{HEI} enrollment was required in order for it to enroll in \acp{OA}. It is being put on hold for now, because it is considered to be somewhat out of scope of an \ac{MVP}.
+In addition to assisting various university outreach activities, the tool's overall goal is to improve ties between the academic and outside communities by opening a line of contact through which requests can be made to the university.
+As a result, students will get more familiar with and connected to the community as a whole, which will greatly benefit their formation.
+
+The tool's primary application is for \ac{UNIPAMPA} Campus Alegrete, but it may also be utilized by other campuses within the university system and potentially by other Brazilian institutions in the future.
 
 \section{Requirements Engineering}\label{ext:requirement-engineering}
 
@@ -29,7 +24,9 @@ This sections aims to present in more detail how the requirements were collected
 
 \subsection{Requirements Obtained through the Grey Literature Review}\label{ext:requirements-grey}
 
-In total, twenty eight (28) \acp{FR} were defined prior to the planning and execution of the survey. These requirements were created after analyzing other tools found during the grey literature review, presented earlier in \Cref{sec:gl-feature-matrix}, which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor, due to some of them being too complex for an \ac{MVP} or simply out of scope. The remaining twenty two (22) were prioritized based on what was considered most critical for the application \ac{MVP}. The complete list of initial requirements and their priority ranking can be seen in \Cref{tab:initial-requirements}.
+In total, twenty eight (28) \acp{FR} were defined prior to the planning and execution of the survey. \citeonline{Clarkson2005-sy} explains that \acp{FR} have the purpose to establish the behavior between inputs and outputs that characterizes a system's or component's function.
+
+These requirements were created after analyzing other tools found during the grey literature review, presented earlier in \Cref{sec:gl-feature-matrix}, which had similar scope to the system being developed. Out of these requirements, six (6) of them were ruled out for now after discussions between both authors and their supervisor, due to some of them being too complex for an \ac{MVP} or simply out of scope. The remaining twenty two (22) were prioritized based on what was considered most critical for the application \ac{MVP}. The complete list of initial requirements and their priority ranking can be seen in \Cref{tab:initial-requirements}.
 
 \input{artifacts/6-initial-requirements.tex}
 
@@ -57,35 +54,50 @@ After the first round of defining the requirements, it was necessary to turn the
 
 \input{artifacts/6-stories-requirements-relation.tex}
 
-There were some cases where multiple \acp{FR} were assigned to a single user story, because the requirements are usually more technical, while a user story is supposed to have a higher level of abstraction.
+There were some cases where multiple \acp{FR} were assigned to a single user story, because the requirements are usually more technical, while a user story is supposed to have a higher level of abstraction \cite{DIMITRIJEVIC2015352}.
 
-% user stories used to write the survey questions
-% new priority based on survey results
+\subsubsection{User Roles}\label{ext:user-roles}
+
+The system as a whole, including the back-end service, was designed with multiple user roles, or actors, in mind. According to \citeonline{omg_2017}, in the Unified Modeling Language, an actor designates a function performed by a user or by any other system that communicates with the subject. In this case, it was referred as the user.
+
+This was a necessity identified very early on, since there are many actors involved in the \ac{OA} ecosystem in \acp{HEI}, as was presented earlier in the study. They are as follows:
+\begin{description}
+  \item[\textbf{Participant}] - a listener, someone who enrolls to passively participate in the activity;
+  \item[\textbf{Instructor}] - a speaker, someone who presents or teaches something to participants;
+  \item[\textbf{Proponent}] - the one who proposes the \ac{OA}, usually a professor;
+  \item[\textbf{Coordinator}] - a role that can review and approve proposed activities for one campus;
+  \item[\textbf{Supervisor}] - usually does not interact with the process, but can monitor the system as a whole, having access to \ac{OA} in multiple campuses.
+\end{description}
+Initially, there was also an ``External Participant'' role, whose difference from the Participant was that no \ac{HEI} enrollment was required in order for it to enroll in \acp{OA}. It is being put on hold for now, because it is considered to be somewhat out of scope of an \ac{MVP}.
 
 \section{Design Decisions}\label{ext:design-decisions}
 
 The decisions made regarding the development of the goal product are discussed in this section.
 
 \begin{description}
-  \item[\textbf{Programming Language:}] \ac{TS} was chosen because of the incredible ecosystem of tools and technologies built around it. It expands the capabilities of common \ac{JS}, a dynamic typed language, by enforcing the usage of types in it. This makes it more strict, which increases robustness and predictiveness.
-  \item[\textbf{Architecture:}] The architecture comes with the chosen framework the tool is being developed in: NextJS with React. The \ac{UI} is component based, meaning each element can be treated as an individual component, such as buttons and cards. It enables reusability, reducing duplicated code and in consequence, less convoluted applications. The website the user sees is a tree where each node is a component. The architecture can be seen in \Cref{fig:arch}.
+  \item[\textbf{Programming Language:}] \ac{TS} was chosen because of the incredible ecosystem of tools and technologies built around it. It expands the capabilities of common \ac{JS}, a dynamic typed language, by enforcing the usage of types in it. This makes it more strict, which increases robustness and predictiveness \cite{Bierman_2014}.
+  \item[\textbf{Architecture:}] The architecture comes with the chosen framework the tool is being developed in: NextJS with React, a \ac{JS} library used in the web to create \aclp{UI}. The \ac{UI} is component based, meaning each element can be treated as an individual component, such as buttons and cards \cite{facebook_2022}. It enables reusability, reducing duplicated code and in consequence, less convoluted applications. The website the user sees is a tree where each node is a component. The architecture can be seen in \Cref{fig:arch}.
 
     \begin{figure}[!htb]
-      \caption{Front end Architecture}\label{fig:arch}
+      \caption{Front-end Architecture}\label{fig:arch}
       \begin{center}
         \includegraphics[width=14cm]{img/6-architecture.png}
       \end{center}
       \fonte{Author.}
     \end{figure}
 
-    Regarding NextJS, it was chosen because of its \ac{SSR} capabilities. This greatly reduces loading times for the user, because the whole page document with its \ac{HTML} tags are pre generated on the application server and delivered all at once when the page loads. This is not normally the case for React applications, which rely on \ac{CSR}. With this approach, the React framework sends the bare minimum information needed in the first load, followed by a loading spinner to the user while the page itself is generated locally in the user's browser. \Cref{fig:ssr} and \Cref{fig:csr} aim to illustrate this behavior.
+    Regarding NextJS, it was chosen because it extends React by enabling \ac{SSR}\footnote{The term \ac{SSI} is used by \citeonline{DBLP:journals/corr/abs-0801-2618}, but is interchangeable with \acl{SSR}.} capabilities. This greatly reduces loading times for the user, because the whole page document with its \ac{HTML} - the standard markup language for documents designed to be displayed in a web browser \cite{patel2013incremental} - tags are pre generated on the application server and delivered all at once when the page loads \cite{DBLP:journals/corr/abs-0801-2618}.
+
+    However, this is not normally the case for React applications, which rely commonly on \ac{CSR}\footnote{The term \ac{CSI} is used by \citeonline{DBLP:journals/corr/abs-0801-2618}, but is interchangeable with \acl{CSR}.}. With this approach, the React framework sends the bare minimum information needed in the first load, followed by a loading screen to the user until the page itself is generated locally in the user's browser \cite{DBLP:journals/corr/abs-0801-2618}. \Cref{fig:csr} and \Cref{fig:ssr} aim to illustrate this behavior.
+
+    This approach has a number of drawbacks, including the inability to support users who do not have JavaScript enabled, potential security risks, much longer page load times, and negative effects on the site's overall \ac{SEO} \cite{Thakkar2020}.
 
     \begin{figure}[!htb]
       \caption{\acl{CSR}}\label{fig:csr}
       \begin{center}
         \includegraphics[width=14cm]{img/6-csr.png}
       \end{center}
-      \fonte{Author.}
+      \fonte{Adapted from \cite{grigoryan_2017}.}
     \end{figure}
 
     \begin{figure}[!htb]
@@ -93,8 +105,21 @@ The decisions made regarding the development of the goal product are discussed i
       \begin{center}
         \includegraphics[width=14cm]{img/6-ssr.png}
       \end{center}
-      \fonte{Author.}
+      \fonte{Adapted from \cite{grigoryan_2017}.}
     \end{figure}
-  \item[\textbf{License:}] The front end web application is licensed under the GNU General Public License v3.0, which is an open source license and is very permissive, allowing even for commercial use. It does not provider however, any kind of warranty or liability regarding the software \cite{gnugpl3}.
+
+  \item[\textbf{License:}] The front-end web application is licensed under the GNU General Public License v3.0, which is an open source license and is very permissive, allowing even for commercial use. It is very important to note, however, that any works or modifications must be licensed under the same license, while also making available their source code and that the distribution of closed source versions is prohibited. It also does not provide any kind of warranty or liability regarding the software \cite{gnugpl3}.
+  \item[\textbf{Multiple Languages:}] The application will be translated to multiple languages, being available at first in Portuguese and English. While this does not hold much importance right now, as the current focus is to cater for the local Portuguese-speaking community, having this in mind since the beginning will save a lot of time in the future, if the software ever expands globally \cite{reynolds_2020}.
+  \item[\textbf{Transparent Analytics:}] Analytics is used to identify, explain, and communicate significant trends in data. It also involves using data patterns to make smart decisions \cite{Kohavi02emergingtrends}. However, as opposed to collecting and tracking data using the commonest solution in the market, Google Analytics \cite{w3techs_2019}, it was decided that the web application should be privacy-friendly and user focused.
+
+    Plausible was chosen, because they have proven that it is possible to measure a website's usage without utilizing cookies, collecting any \ac{PII} about the website's visitors, or collecting any personal data at all \cite{plausible_2022}. This is done through an analytics dashboard available publicly and accessible by anyone, which displays anonymous data about the traffic in the website. \Cref{fig:plausible} illustrates an example of this dashboard\footnote{The dashboard is available for anyone on their website, through \url{https://plausible.io/plausible.io}.}.
+
+    \begin{figure}[!htb]
+      \caption{Plausible Analytics Dashboard}\label{fig:plausible}
+      \begin{center}
+        \includegraphics[width=16cm]{img/6-plausible.png}
+      \end{center}
+      \fonte{\cite{plausible_2022}}
+    \end{figure}
 
 \end{description}
