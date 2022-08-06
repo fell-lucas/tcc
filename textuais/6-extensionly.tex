@@ -5,13 +5,13 @@
 \chapter{Extensionly Front-end Design}\label{extensionly}
 %=======================================
 
-This chapter describes how the solution will be developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the front-end relates to the other \ac{TP} written about Extensionly, which focuses on the back-end implementation. The chapter also discusses user roles. \Cref{ext:requirement-engineering} presents how the system requirements were managed. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
+This chapter describes how the solution will be developed and the process behind its implementation, presenting information about the applied software engineering to create the system. In \Cref{ext:initial-considerations}, it is briefly presented how the front-end relates to the other \ac{TP} written about Extensionly, which focuses on the back-end implementation. \Cref{ext:requirement-engineering} presents how the system requirements were managed, while also describing user roles and user stories in \Cref{ext:user-roles} and \Cref{ext:user-stories}. Lastly, \Cref{ext:design-decisions} presents some of the design decisions made in order to develop a robust application.
 
 It is also important to note that the terms ``front-end'', ``system'', ``application'', ``web app'' and ``tool'' are used interchangeably to refer to the goal product of this study.
 
 \section{Initial Considerations}\label{ext:initial-considerations}
 
-The Extensionly front-end will be developed as a web application, which relates to the back-end by consuming its \ac{API}, - a collection of established guidelines that describe how programs or computers communicate with one another \cite{ibmapi}. The project will be versioned using Git, a version control system made to manage any project, no matter how big or small, quickly and effectively \cite{chacon2014pro}. The source code will be available in the official repository\footnote{Extensionly front-end code is available at \url{https://github.com/Dalepfell/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the back-end server for now.
+The Extensionly front-end will be developed as a web application, which relates to the back-end by consuming its \ac{API}, - a collection of established guidelines that describe how programs or computers communicate with one another \cite{ibmapi}. The project will be versioned using Git, a version control system made to manage any project, no matter how big or small, quickly and effectively \cite{chacon2014pro}. The source code will be available in the official repository\footnote{Extensionly front-end code is available at \url{https://github.com/fell-lucas/extensionly-frontend}}. A lot of communication between both authors is required for the partnership to work, since this is the only client being developed for the back-end server for now.
 
 In addition to assisting various university outreach activities, the tool's overall goal is to improve ties between the academic and outside communities by opening a line of contact through which requests can be made to the university.
 As a result, students will get more familiar with and connected to the community as a whole, which will greatly benefit their formation.
@@ -48,22 +48,7 @@ The following are sketches of how the initial requirements relate to the defined
   \fonte{Author.}
 \end{figure}
 
-\subsection{User Stories derived from the Requirements}\label{ext:user-stories}
-
-After the first round of defining the \acp{FR}, it was necessary to turn them into user stories, to use them in the survey, in a more descriptive form for the respondents. The stories were written with the system user roles in mind, which were presented earlier in \Cref{ext:initial-considerations}. They were used directly, with no other refinements, in the final survey and were defined in \Cref{tab:proponent-user-stories}, \Cref{tab:instructor-user-stories}, \Cref{tab:participant-user-stories} and \Cref{tab:coordinator-user-stories}.
-
-\input{artifacts/5-user-stories-proponent.tex}
-\input{artifacts/5-user-stories-instructor.tex}
-\input{artifacts/5-user-stories-participant.tex}
-\input{artifacts/5-user-stories-coordinator.tex}
-
-However, in order to relate \acp{FR} with the questions and also update their ranking based on the survey results, \Cref{tab:stories-requirements-relation} was created.
-
-\input{artifacts/6-stories-requirements-relation.tex}
-
-There were some cases where multiple \acp{FR} were assigned to a single user story, because the requirements are usually more technical, while a user story is supposed to have a higher level of abstraction \cite{DIMITRIJEVIC2015352}.
-
-\subsubsection{User Roles}\label{ext:user-roles}
+\subsection{User Roles}\label{ext:user-roles}
 
 The system as a whole, including the back-end service, was designed with multiple user roles, or actors, in mind. According to \textcite{omg_2017}, in the Unified Modeling Language, an actor designates a function performed by a user or by any other system that communicates with the subject. In this case, it was referred as the user.
 
@@ -76,6 +61,21 @@ This was a necessity identified very early on, since there are many actors invol
   \item[\textbf{Supervisor}] - usually does not interact with the process, but can monitor the system as a whole, having access to \ac{OA} in multiple campuses.
 \end{description}
 Initially, there was also an ``External Participant'' role, whose difference from the Participant was that no \ac{HEI} enrollment was required in order for it to enroll in \acp{OA}. It is being put on hold for now, because it is considered to be somewhat out of scope of an \ac{MVP}.
+
+\subsection{User Stories derived from the Requirements}\label{ext:user-stories}
+
+After the first round of defining the \acp{FR}, it was necessary to turn them into user stories, to use them in the survey, in a more descriptive form for the respondents. The stories were written with the system user roles in mind, which were presented earlier. They were used directly, with no other refinements, in the final survey and were defined in \Cref{tab:proponent-user-stories}, \Cref{tab:instructor-user-stories}, \Cref{tab:participant-user-stories} and \Cref{tab:coordinator-user-stories}.
+
+\input{artifacts/5-user-stories-proponent.tex}
+\input{artifacts/5-user-stories-instructor.tex}
+\input{artifacts/5-user-stories-participant.tex}
+\input{artifacts/5-user-stories-coordinator.tex}
+
+However, in order to relate \acp{FR} with the questions and also update their ranking based on the survey results, \Cref{tab:stories-requirements-relation} was created.
+
+\input{artifacts/6-stories-requirements-relation.tex}
+
+There were some cases where multiple \acp{FR} were assigned to a single user story, because the requirements are usually more technical, while a user story is supposed to have a higher level of abstraction \cite{DIMITRIJEVIC2015352}.
 
 \section{Design Decisions}\label{ext:design-decisions}
 
